@@ -11757,6 +11757,15 @@ html.rd-navbar-fixed-linked .page {
 	color: #aeb1be;
 }
 
+@media (max-width: 767.98px) {
+	.owl-prev,
+	.owl-next {
+		font-size: 20px;
+		line-height: 24px;
+		color: rgba(174, 177, 190, 0.02);
+	}
+}
+
 .owl-prev:hover,
 .owl-next:hover {
 	color: #e53935;
@@ -16269,6 +16278,94 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 	}
 }
 
+/* Homepage - hero (classe dedicata, non tocca altre pagine) */
+.home-hero {
+	padding: 200px 0 170px;
+	border-bottom: none;
+	position: relative;
+}
+
+/* Colonna contenuto hero - centrata */
+.hero-content-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+}
+
+/* Dissolvenza graduale verso il basso per eliminare lo stacco visivo */
+.home-hero::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 120px;
+	background: linear-gradient(to bottom, transparent 0%, #242424 100%);
+	pointer-events: none;
+	z-index: 2;
+}
+
+/* Mobile - usa home_mobile.png come immagine */
+
+@media (max-width: 767.98px) {
+	.home-hero {
+		padding: 0;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-image: 
+			linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+			url('../images/home_mobile.png') !important;
+		background-position: center 20% !important;
+		background-size: cover !important;
+	}
+
+	.home-hero .container {
+		width: 100%;
+		padding: 0 20px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.home-hero .row {
+		margin-top: 0 !important;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.hero-content-col {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.home-hero .hero-cta {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.home-hero .hero-cta .button {
+		width: 100%;
+		max-width: 280px;
+	}
+
+	.home-hero::after {
+		height: 80px;
+	}
+}
+
 .chisiamo-tag {
 	font-size: 12px;
 	font-weight: 600;
@@ -16420,6 +16517,15 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 	font-size: 14px;
 }
 
+@media (max-width: 767.98px) {
+	.hero-badge {
+		display: flex;
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 /* Headline */
 .hero-headline {
 	font-size: 52px;
@@ -16465,6 +16571,8 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 @media (max-width: 767.98px) {
 	.hero-sub {
 		font-size: 16px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -16495,6 +16603,15 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 	align-items: center;
 	gap: 0;
 	flex-wrap: wrap;
+}
+
+@media (max-width: 767.98px) {
+	.hero-stats {
+		justify-content: center;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .hero-stat {
