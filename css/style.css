@@ -15485,7 +15485,7 @@ body {
 /* Logo MisterUp nel panel mobile (top bar) */
 .rd-navbar-fixed .rd-navbar-brand {
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	font-size: 0;
 	line-height: 0;
 }
@@ -16645,4 +16645,30 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 .img-banco-effect:hover {
   transform: translateY(-10px);
   box-shadow: 0 25px 45px rgba(0,0,0,0.6);
+}
+
+/* Custom Header Mobile Section Title */
+.rd-navbar-toggle-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.mobile-section-title {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 2px; /* slight visual adjustment */
+}
+
+.rd-navbar-static .mobile-section-title {
+    display: none; /* Nasconde su desktop */
+}
+
+/* Fix vertical centering of the logo against the hamburger icon */
+.rd-navbar-fixed .rd-navbar-brand {
+    transform: translateY(-3px); /* Compensa lo spazio visivo occupato dalla bandiera in basso */
 }
