@@ -1837,6 +1837,11 @@ img {
 	height: auto;
 }
 
+.preloader-icon {
+    max-width: 60%!important;
+}
+
+
 .img-responsive {
 	width: 100%;
 }
