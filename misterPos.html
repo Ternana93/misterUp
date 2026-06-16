@@ -78,8 +78,14 @@
         </div>
       </header>
 
-    <section class="section section-lg text-center bg-dark-3 pd50">
-        <div class="container">
+    <section class="section section-lg text-center bg-dark-3 pd50" style="background-image: url('images/back2_nero.png'); background-size: cover; background-position: center; position: relative; overflow: hidden;">
+        <!-- OVERLAY NERO (per leggibilità) -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(11,15,18,0.92) 0%, rgba(11,15,18,0.85) 50%, rgba(11,15,18,0.92) 100%); z-index: 0;"></div>
+        <!-- MARCHIO IN PENOMBRA TRAMITE CSS -->
+        <div class="logo-watermark-hero" style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%); opacity: 0.05; pointer-events: none; z-index: 1; max-width: 350px;">
+          <img src="images/icona_logo.png" alt="MisterUp Watermark" style="width: 100%; filter: contrast(120%) brightness(150%); mix-blend-mode: overlay;">
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
             <div class="row row-50 align-items-center">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay=".1s">
                     <!-- il tuo owl resta -->
@@ -467,8 +473,8 @@
                             <div class="group group-xs mt-3">
                                 <a class="icon icon-sm icon-creative mdi mdi-facebook" href="#"></a>
                                 <a class="icon icon-sm icon-creative mdi mdi-instagram" href="#"></a>
-                                <a class="icon icon-sm icon-creative mdi mdi-linkedin" href="#"></a>
-                                <a class="icon icon-sm icon-creative mdi mdi-youtube" href="#"></a>
+                                <a class="icon icon-sm icon-creative mdi mdi-whatsapp" href="#"></a>
+                                <a class="icon icon-sm icon-creative mdi mdi-youtube-play" href="#"></a>
                             </div>
                         </div>
                     </div>

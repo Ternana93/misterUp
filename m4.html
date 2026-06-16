@@ -78,15 +78,22 @@
         </div>
       </header>
 
-    <section class="section section-lg text-center bg-dark-3 pd50">
-        <div class="container">
+    <section class="section section-lg text-center bg-dark-3 pd50" style="background-image: url('images/back2_nero.png'); background-size: cover; background-position: center; position: relative; overflow: hidden;">
+        <!-- OVERLAY NERO (per leggibilità) -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(11,15,18,0.92) 0%, rgba(11,15,18,0.85) 50%, rgba(11,15,18,0.92) 100%); z-index: 0;"></div>
+        <!-- MARCHIO IN PENOMBRA TRAMITE CSS -->
+        <div class="logo-watermark-hero" style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%); opacity: 0.05; pointer-events: none; z-index: 1; max-width: 350px;">
+          <img src="images/icona_logo.png" alt="MisterUp Watermark" style="width: 100%; filter: contrast(120%) brightness(150%); mix-blend-mode: overlay;">
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
             <div class="row row-50 align-items-center">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay=".1s">
                     <!-- il tuo owl resta -->
                     <div class="owl-carousel"
                          data-items="1"
                          data-dots="false"
-                         data-loop="true" >
+                         data-loop="true"
+                         data-autoplay="false">
 
                         <img src="images/m4/m4_0.png"/>
                         <img src="images/m4/m4_1.png"/>
@@ -257,28 +264,28 @@
                                 <span class="wow slideInUp">Caratteristiche tecniche</span>
 
                             </h4>
-                            <ul>
-                                <li>
+                            <div class="m4-specs-grid">
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    PC industriale (CPU Intel i5 - RAM 4Gb - SSD 120Gb - OS Windows 10)
-                                </li>
-                                <li>
+                                    <p>PC industriale<br><small>(CPU Intel i5 - RAM 4Gb - SSD 120Gb - OS Windows 10)</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Monitor touch screen 16:9 da 10,1"
-                                </li>
-                                <li>
+                                    <p>Monitor touch screen<br><small>16:9 da 10,1"</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Gruppo di continuità (UPS) da 650VA
-                                </li>
-                                <li>
+                                    <p>Gruppo di continuità<br><small>UPS da 650VA</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Software "INTELLIGENTE" integrato per la gestione completa della macchina
-                                </li>
-                                <li>
+                                    <p>Software INTELLIGENTE<br><small>Gestione completa della macchina</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Account personale nel cloud per il controllo da remoto
-                                </li>
-                            </ul>
+                                    <p>Account Cloud<br><small>Controllo da remoto personalizzato</small></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -321,64 +328,93 @@
                              data-loop="true"
                              data-margin="0"
                              data-stage-padding="0"
-                             data-mouse-drag="true">
+                             data-mouse-drag="true"
+                             data-autoplay="false">
                             <!-- SLIDE 1 -->
                             <div class="checklist checklist-fixed">
                                 <div class="checklist-header">
                                     <span class="checklist-icon linearicons-coins"></span>
                                     <h4 class="mb-1">Riciclatore di Monete</h4>
-                                    <p class="checklist-subtitle"><b>Innovative Technology - SMART Coin System:
-                                    </b></p>
+                                    <p class="checklist-subtitle"><b>Innovative Technology - SMART Coin System:</b></p>
                                 </div>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione/erogazione: 0,02€ - 0,05 € - 0,10 € - 0,20 € - 0,50 € - 1,00 € - 2,00 € (configurabili)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità monete riciclo: 2.000 pz totali
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità monete cassetto: 300 pz
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione/erogazione: monete multiple
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 12 monete/secondo</li>
-                                </ul>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli accettazione/erogazione<br><small>0,02€ - 0,05€ - 0,10€ - 0,20€ - 0,50€ - 1,00€ - 2,00€ (configurabili)</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità riciclo<br><small>2.000 pz totali</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità cassetto<br><small>300 pz</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità<br><small>Monete multiple</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità<br><small>12 monete/secondo</small></p>
+                                    </div>
+                                </div>
                             </div>
                             <!-- SLIDE 2 -->
                             <div class="checklist checklist-fixed">
                                 <div class="checklist-header">
                                     <span class="checklist-icon linearicons-cash-euro"></span>
                                     <h4 class="mb-1">Riciclatore di Banconote</h4>
-                                    <p class="checklist-subtitle"><b>Innovative Technology - SPECTRAL Payout:
-                                    </b></p>
+                                    <p class="checklist-subtitle"><b>Innovative Technology - SPECTRAL Payout:</b></p>
                                 </div>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote riciclo: 80 pz totali
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote cassetto: 500 pz o 1000 pz (opzionale)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione/erogazione: singola banconota
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 1 banconota/secondo</li>
-                                </ul>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli accettazione<br><small>5,00€ - 10,00€ - 20,00€ - 50,00€ - 100,00€ - 200,00€ - 500,00€</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli erogazione<br><small>4 tagli configurabili (5,00€ - 10,00€ - 20,00€ - 50,00€)</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità riciclo<br><small>80 pz totali</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità cassetto<br><small>500 pz o 1000 pz (opzionale)</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità<br><small>Singola banconota</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità<br><small>1 banconota/secondo</small></p>
+                                    </div>
+                                </div>
                             </div>
                             <!-- SLIDE 3 -->
                             <div class="checklist checklist-fixed">
                                 <div class="checklist-header">
                                     <span class="checklist-icon linearicons-credit-card"></span>
                                     <h4 class="mb-1">Terminale POS Integrato</h4>
-                                    <p class="checklist-subtitle"><b>PAX IM20
-                                    </b></p>
+                                    <p class="checklist-subtitle"><b>PAX IM20</b></p>
                                 </div>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Pagamento elettronico tramite Carte di Debito, Credito e Prepagate
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Pagamento Contact-Less o Contact-Chip (a discrezione del cliente)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Display touchscreen a colori (per istruzioni e digitazione PIN)</li>
-                                </ul>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Pagamenti accettati<br><small>Carte Debito, Credito e Prepagate</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità contactless<br><small>Contact-Less o Contact-Chip</small></p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Display<br><small>Touchscreen a colori per PIN</small></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     <div class="owl-3dots">
@@ -399,7 +435,8 @@
                         <div class="owl-carousel"
                              data-items="1"
                              data-dots="false"
-                             data-loop="true" >
+                             data-loop="true"
+                             data-autoplay="false">
 
                             <img src="images/m4/m4_0.png"/>
                             <img src="images/m4/m4_1.png"/>
@@ -426,26 +463,24 @@
                             <h5 class="text-muted mb-3 align-center">
                                 Piccola, pratica e veloce
                             </h5>
-                            <ul>
-                                <li>
+                            <div class="m4-specs-grid">
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Altezza : <b>51 cm (MAX) / 35 cm (MIN)</b>
-                                </li>
-                                <li>
+                                    <p>Altezza<br><small>51 cm (MAX) / 35 cm (MIN)</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Larghezza : <b>45 cm</b>
-                                </li>
-                                <li>
+                                    <p>Larghezza<br><small>45 cm</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Profondità : <b>45 cm</b>
-                                </li>
-                                <li>
+                                    <p>Profondità<br><small>45 cm</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Peso : <b>50 Kg</b>
-                                </li>
-
-
-                            </ul>
+                                    <p>Peso<br><small>50 Kg</small></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -566,8 +601,8 @@
                             <div class="group group-xs mt-3">
                                 <a class="icon icon-sm icon-creative mdi mdi-facebook" href="#"></a>
                                 <a class="icon icon-sm icon-creative mdi mdi-instagram" href="#"></a>
-                                <a class="icon icon-sm icon-creative mdi mdi-linkedin" href="#"></a>
-                                <a class="icon icon-sm icon-creative mdi mdi-youtube" href="#"></a>
+                                <a class="icon icon-sm icon-creative mdi mdi-whatsapp" href="#"></a>
+                                <a class="icon icon-sm icon-creative mdi mdi-youtube-play" href="#"></a>
                             </div>
                         </div>
                     </div>

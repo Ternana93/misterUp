@@ -62,39 +62,63 @@
         </div>
       </header>
 
-      <!-- Sezione hero prodotto -->
-      <section class="section section-lg text-center bg-dark-3 pd50">
+      <!-- HERO -->
+      <section class="section section-lg bg-dark-1 pd70 text-center" style="background-image: url('images/back2_nero.png'); background-size: cover; background-position: center; position: relative; overflow: hidden;">
+        <!-- OVERLAY NERO (per leggibilità) -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(11,15,18,0.92) 0%, rgba(11,15,18,0.85) 50%, rgba(11,15,18,0.92) 100%); z-index: 0;"></div>
+        <!-- MARCHIO IN PENOMBRA TRAMITE CSS -->
+        <div class="logo-watermark-hero" style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%); opacity: 0.05; pointer-events: none; z-index: 1; max-width: 350px;">
+          <img src="images/icona_logo.png" alt="MisterUp Watermark" style="width: 100%; filter: contrast(120%) brightness(150%); mix-blend-mode: overlay;">
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+          <h3 class="section-title">Mister Self</h3>
+          <p class="text-muted wow slideInUp mt-3" style="max-width:600px;margin:0 auto;font-size:18px;">
+            Ordina, paga e ritira
+          </p>
+        </div>
+      </section>
+
+      <!-- 4 CARD INFO -->
+      <section class="section section-lg bg-dark-2 pd70">
         <div class="container">
-          <div class="row row-50 align-items-center">
-            <div class="col-lg-6 wow slideInUp" data-wow-delay=".1s">
-              <div class="owl-carousel owl-mself"
-                   data-items="1"
-                   data-dots="false"
-                   data-loop="true">
-                <img src="images/misterup/MISTER_UPm4.png"/>
-              </div>
-              <div class="owl-3dots">
-                <span class="dot-prev">&#8592;</span>
-                <span class="dot-center"></span>
-                <span class="dot-next">&#8594;</span>
+          <div class="row row-40">
+
+            <!-- Card 1 -->
+            <div class="col-md-6 wow slideInUp" data-wow-delay=".0s">
+              <div class="cloud-card cloud-card-accent">
+                <div class="cloud-card-icon"><span class="linearicons-wallet"></span></div>
+                <h4 class="cloud-card-title">Pagamento Autonomo del Cliente</h4>
+                <p>Mister SELF è la cassa automatica self-service progettata per permettere al cliente di <strong>ordinare e pagare in totale autonomia</strong>, migliorando l'efficienza del punto vendita e riducendo tempi di attesa.</p>
               </div>
             </div>
-            <div class="col-lg-6 wow slideInUp" data-wow-delay=".1s">
-              <h3 class="section-title">Mister Self</h3>
-              <h5 class="text-muted mb-3">Ordina, paga e ritira</h5>
-              <p>
-                  Mister SELF è la cassa automatica self-service progettata per automatizzare completamente il processo di ordine e pagamento,
-                  migliorando l’efficienza del punto vendita e riducendo tempi di attesa e necessità di personale dedicato alla cassa.
-                  Grazie all’interfaccia intuitiva e al sistema integrato di gestione ordini, il cliente può effettuare autonomamente la propria
-                  selezione, completare il pagamento e ricevere lo scontrino in modo semplice, rapido e sicuro. Una volta concluso il pagamento,
-                  l’ordine viene inviato automaticamente, consentendo la preparazione e poi il ritiro senza ulteriori passaggi alla cassa.
-                  Mister SELF integra un sistema professionale di gestione delle monete ad alta velocità e capacità, progettato per elevati flussi di clientela.
-                  Per la gestione delle banconote, il sistema può essere configurato con differenti lettori professionali in base alle esigenze operative del punto vendita.
-                  La gestione integrata dei pagamenti elettronici e il controllo da remoto tramite piattaforma
-                  Cloud completano una soluzione moderna, efficiente e completamente autonoma.
-              </p>
-              <a class="button button-primary button-winona mt-3" href="contatti.html">Richiedi informazioni</a>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 wow slideInUp" data-wow-delay=".1s">
+              <div class="cloud-card cloud-card-green">
+                <div class="cloud-card-icon"><span class="linearicons-credit-card"></span></div>
+                <h4 class="cloud-card-title">Multi-Pagamento Sicuro</h4>
+                <p>Accetta pagamenti sia contanti che elettronici in totale sicurezza. <strong>Gestione automatica del resto</strong> e eliminazione di errori di conteggio. Sistema integrato con pagamenti contactless e POS per massima flessibilità.</p>
+              </div>
             </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 wow slideInUp" data-wow-delay=".2s">
+              <div class="cloud-card cloud-card-orange">
+                <div class="cloud-card-icon"><span class="linearicons-clock"></span></div>
+                <h4 class="cloud-card-title">Riduzione Drastica dei Tempi</h4>
+                <p>Riduci code e tempi di attesa. Una volta concluso il pagamento, <strong>l'ordine viene inviato automaticamente</strong> per la preparazione e il ritiro senza ulteriori passaggi alla cassa.</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 wow slideInUp" data-wow-delay=".3s">
+              <div class="cloud-card cloud-card-blue">
+                <div class="cloud-card-icon"><span class="linearicons-cloud"></span></div>
+                <h4 class="cloud-card-title">Soluzione Moderna e Connessa</h4>
+                <p>Sistema completo con controllo remoto via piattaforma Cloud, validazione anti-falso per monete e banconote, e <strong>interfaccia intuitiva</strong> per un'esperienza moderna e sicura del cliente.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -227,41 +251,34 @@
 
         <section class="section section-lg bg-dark-3 pd70" >
             <div class="container">
-                <div class="row row-50 justify-content-center justify-content-lg-between align-items-center">
-
-                    <div class="col-md-10 col-lg-6 wow-outer">
-                        <img src="images/ammortamento.png"/>
+                <h4 class="section-title fw400 wow-outer text-center" style="margin-bottom:40px;">
+                    <span class="wow slideInUp">Caratteristiche Tecniche</span>
+                </h4>
+                <div class="tech-specs-grid">
+                    <div class="tech-spec-card">
+                        <div class="cloud-card-icon"><span class="linearicons-laptop"></span></div>
+                        <h4 class="cloud-card-title">PC Industriale</h4>
+                        <p>CPU Intel i5 - RAM 4Gb - SSD 120 Gb - OS Windows 10</p>
                     </div>
-                    <div class="col-md-10 col-lg-5 wow-outer">
-                        <div class="checklist wow slideInRight" data-wow-delay=".1s">
-                            <h4 class="section-title fw400 wow-outer align-center" style="margin-bottom:20px;">
-
-                                <span class="wow slideInUp">Caratteristiche tecniche</span>
-
-                            </h4>
-                            <ul>
-                                <li>
-                                    <span class="check-icon linearicons-check"></span>
-                                    PC industriale (CPU Intel i5 - RAM 4Gb - SSD 120 Gb - OS Windows 10)
-                                </li>
-                                <li>
-                                    <span class="check-icon linearicons-check"></span>
-                                    Monitor touch screen 16:9 da 21,5"
-                                </li>
-                                <li>
-                                    <span class="check-icon linearicons-check"></span>
-                                    Gruppo di continuità (UPS) da 1200VA
-                                </li>
-                                <li>
-                                    <span class="check-icon linearicons-check"></span>
-                                    Software "INTELLIGENTE" integrato per la gestione completa della macchina
-                                </li>
-                                <li>
-                                    <span class="check-icon linearicons-check"></span>
-                                    Account personale nel cloud per il controllo da remoto
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="tech-spec-card">
+                        <div class="cloud-card-icon"><span class="linearicons-screen"></span></div>
+                        <h4 class="cloud-card-title">Display Touch</h4>
+                        <p>Monitor 16:9 da 21,5"</p>
+                    </div>
+                    <div class="tech-spec-card">
+                        <div class="cloud-card-icon"><span class="linearicons-power"></span></div>
+                        <h4 class="cloud-card-title">UPS</h4>
+                        <p>Gruppo continuità 1200VA</p>
+                    </div>
+                    <div class="tech-spec-card">
+                        <div class="cloud-card-icon"><span class="linearicons-cog"></span></div>
+                        <h4 class="cloud-card-title">Software Intelligente</h4>
+                        <p>Gestione completa della macchina</p>
+                    </div>
+                    <div class="tech-spec-card">
+                        <div class="cloud-card-icon"><span class="linearicons-cloud"></span></div>
+                        <h4 class="cloud-card-title">Cloud Account</h4>
+                        <p>Controllo remoto personalizzato</p>
                     </div>
                 </div>
             </div>
@@ -289,153 +306,207 @@
                         </div>
                     </div>
 
-
-
                     <!-- CAROSELLO CARATTERISTICHE -->
                     <div class="col-md-10 col-lg-5 wow-outer carosello-caratteristiche">
 
-
-
-                        <div class="owl-carousel wow slideInLeft"
+                        <div class="owl-carousel owl-checklist wow slideInLeft"
                              data-items="1"
                              data-dots="false"
                              data-nav="false"
                              data-loop="true"
                              data-margin="30"
                              data-stage-padding="0"
-                             data-mouse-drag="true">
-                            <!-- SLIDE 1 -->
+                             data-mouse-drag="true"
+                             data-autoplay="false">
+
+                            <!-- SLIDE 1: Monete -->
                             <div class="checklist">
                                 <h4 class="mb-2">Riciclatore di monete</h4>
                                 <p class="checklist-subtitle mb-3">
                                     <b>Innovative Technology - SMART Coin System</b>
                                 </p>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione/erogazione: 0,02 € - 0,05 € - 0,10 € - 0,20 € - 0,50 € - 1,00 € - 2,00 € (configurabili)</li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità monete riciclo: 2000 pz totali</li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità monete cassetto: 700 pz
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione/erogazione: monete multiple</li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 12 monete/secondo</li>
-                                </ul>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in accettazione/erogazione: 0,02 € - 0,05 € - 0,10 € - 0,20 € - 0,50 € - 1,00 € - 2,00 € (configurabili)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità monete riciclo: 2000 pz totali</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità monete cassetto: 700 pz</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità accettazione/erogazione: monete multiple</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità accettazione/erogazione: 12 monete/secondo</p>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- SLIDE 2 -->
+
+                            <!-- SLIDE 2: Banconote CPI/MEI -->
                             <div class="checklist">
-                                <h4 class="mb-2">Riciclatore di banconote a scelta tra:</h4>
+                                <h4 class="mb-2">Riciclatore di banconote</h4>
                                 <p class="checklist-subtitle mb-3">
                                     <b>CPI/MEI - BNR Advance 320:</b>
                                 </p>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote riciclo: 180 pz totali (60 pz per due tagli e 30 pz per gli altri due tagli; configurabili)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote cassetto: 600 pz
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione: singola banconota
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità erogazione: mazzetta (fino a 15 banconote insieme)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 3 banconota/secondo
-
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="checklist">
-
-                                <p class="checklist-subtitle mb-3">
-                                    <b>JCM – UBA ProRQ:
-                                    </b>
-                                </p>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote riciclo: 180 pz totali (60 pz per ogni taglio)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote cassetto: 400 pz
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione/erogazione: singola banconota
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 2 banconota/secondo
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                            <div class="checklist">
-
-                                <p class="checklist-subtitle mb-3">
-                                    <b>GRG BR-15:
-                                    </b>
-                                </p>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote riciclo: 0 pz totali (80 pz per due tagli e 50 pz per gli altri due tagli; configurabili)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote cassetto: 1000 pz
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione: singola banconota
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità erogazione: mazzetta (fino a 15 banconote insieme)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 3 banconota/secondo
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                            <div class="checklist">
-
-                                <p class="checklist-subtitle mb-3">
-                                    <b>Innovative Technology - SPECTRAL Payout:
-                                    </b>
-                                </p>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €
-
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)
-
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote riciclo: 80 pz totali 
-
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote cassetto: 500 pz o 1000 pz (opzionale)
-
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione/erogazione: singola banconota
-
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 1 banconota/secondo
-                                    </li>
-                                    
-
-                                </ul>
-                            </div>
-
-                            <div class="checklist checklist-fixed">
-                                <div class="checklist-header">
-                                    <span class="checklist-icon linearicons-credit-card"></span>
-                                    <h4 class="mb-1">Terminale POS(opzionale)</h4>
-                                    <p class="checklist-subtitle"><b>PAX IM20
-                                    </b></p>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote riciclo: 180 pz totali (60 pz per due tagli e 30 pz per gli altri due tagli; configurabili)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote cassetto: 600 pz</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità erogazione: mazzetta (fino a 15 banconote insieme)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità accettazione/erogazione: 3 banconote/secondo</p>
+                                    </div>
                                 </div>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Pagamento elettronico tramite Carte di Debito, Credito e Prepagate
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Pagamento Contact-Less o Contact-Chip (a discrezione del cliente)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Display touchscreen a colori (per istruzioni e digitazione PIN)</li>
-                                </ul>
                             </div>
+
+                            <!-- SLIDE 3: JCM -->
+                            <div class="checklist">
+                                <h4 class="mb-2">Riciclatore di banconote</h4>
+                                <p class="checklist-subtitle mb-3">
+                                    <b>JCM – UBA ProRQ:</b>
+                                </p>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote riciclo: 180 pz totali (60 pz per ogni taglio)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote cassetto: 400 pz</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità accettazione/erogazione: singola banconota</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità accettazione/erogazione: 2 banconote/secondo</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 4: GRG -->
+                            <div class="checklist">
+                                <h4 class="mb-2">Riciclatore di banconote</h4>
+                                <p class="checklist-subtitle mb-3">
+                                    <b>GRG BR-15:</b>
+                                </p>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote riciclo: 80 pz per due tagli e 50 pz per gli altri due (configurabili)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote cassetto: 1000 pz</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità erogazione: mazzetta (fino a 15 banconote insieme)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità accettazione/erogazione: 3 banconote/secondo</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 5: SPECTRAL -->
+                            <div class="checklist">
+                                <h4 class="mb-2">Riciclatore di banconote</h4>
+                                <p class="checklist-subtitle mb-3">
+                                    <b>Innovative Technology - SPECTRAL Payout:</b>
+                                </p>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote riciclo: 80 pz totali</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote cassetto: 500 pz o 1000 pz (opzionale)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità accettazione/erogazione: singola banconota</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità accettazione/erogazione: 1 banconota/secondo</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 6: POS -->
+                            <div class="checklist checklist-fixed">
+                                <h4 class="mb-2">Terminale POS(opzionale)</h4>
+                                <p class="checklist-subtitle mb-3">
+                                    <b>PAX IM20</b>
+                                </p>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Pagamento elettronico tramite Carte di Debito, Credito e Prepagate</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Pagamento Contact-Less o Contact-Chip (a discrezione del cliente)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Display touchscreen a colori (per istruzioni e digitazione PIN)</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="owl-3dots">
                             <span class="dot-prev">&#8592;</span>
@@ -443,10 +514,10 @@
                             <span class="dot-next">&#8594;</span>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
-
       <!-- Form richiesta informazioni -->
       <section id="form-section" class="section text-center bg-dark-2 pd70">
         <div class="container">
@@ -525,8 +596,8 @@
                 <div class="group group-xs mt-3">
                   <a class="icon icon-sm icon-creative mdi mdi-facebook" href="#"></a>
                   <a class="icon icon-sm icon-creative mdi mdi-instagram" href="#"></a>
-                  <a class="icon icon-sm icon-creative mdi mdi-linkedin" href="#"></a>
-                  <a class="icon icon-sm icon-creative mdi mdi-youtube" href="#"></a>
+                  <a class="icon icon-sm icon-creative mdi mdi-whatsapp" href="#"></a>
+                  <a class="icon icon-sm icon-creative mdi mdi-youtube-play" href="#"></a>
                 </div>
               </div>
             </div>

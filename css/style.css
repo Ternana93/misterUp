@@ -2,6 +2,14 @@
 /*
 * Trunk version 2.0.0
 */
+
+/* Remove all focus/outline highlights globally */
+*,
+*:before,
+*:after {
+	-webkit-tap-highlight-color: transparent !important;
+}
+
 a:focus,
 button:focus {
 	outline: none !important;
@@ -12,7 +20,89 @@ button::-moz-focus-inner {
 }
 
 *:focus {
-	outline: none;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+/* Nuclear option - remove ALL selection and focus styles */
+::-webkit-selection {
+	background: transparent !important;
+}
+
+::-moz-selection {
+	background: transparent !important;
+}
+
+::selection {
+	background: transparent !important;
+}
+
+/* Remove any active/focus/visited links highlighting */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+	-webkit-tap-highlight-color: transparent !important;
+	outline: none !important;
+}
+
+button,
+input,
+select,
+textarea {
+	-webkit-tap-highlight-color: transparent !important;
+	outline: none !important;
+}
+
+/* Remove carousel/slider focus highlights */
+.owl-carousel:focus,
+.owl-carousel *:focus,
+.owl-stage:focus,
+.owl-stage *:focus,
+.swiper:focus,
+.swiper *:focus,
+.swiper-slide:focus {
+	outline: none !important;
+	box-shadow: none !important;
+	-webkit-tap-highlight-color: transparent !important;
+}
+
+/* Remove button focus on carousel controls */
+.owl-nav button:focus,
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+/* Additional carousel styling to prevent any highlights */
+.owl-carousel {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent !important;
+}
+
+.owl-carousel .owl-item {
+	-webkit-tap-highlight-color: transparent !important;
+}
+
+.owl-stage {
+	-webkit-tap-highlight-color: transparent !important;
+	outline: none !important;
+}
+
+/* Remove any active states on carousel slides */
+.owl-carousel .owl-item:active,
+.owl-carousel .owl-item:focus,
+.owl-carousel .owl-stage:active,
+.owl-carousel .owl-stage:focus {
+	outline: none !important;
+	box-shadow: none !important;
+	-webkit-tap-highlight-color: transparent !important;
 }
 
 blockquote {
@@ -8901,13 +8991,13 @@ html:not(.lt-ie10) .not-animated {
 .preloader::before {
 	top: 0;
 	bottom: 0;
-	background: #242424;
+	background: #1e1e1e;
 }
 
 .preloader::after {
 	top: 0;
 	bottom: 0;
-	background: #242424;
+	background: #1e1e1e;
 }
 
 .preloader.loaded::before, .preloader.loaded::after {
@@ -8937,7 +9027,6 @@ html:not(.lt-ie10) .not-animated {
 .preloader-logo {
 	position: relative;
 	z-index: 10;
-	transform: translate3d(0, -50%, 0);
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
@@ -8989,14 +9078,13 @@ html:not(.lt-ie10) .not-animated {
 .preloader-flag {
 	display: flex;
 	gap: 0;
-	height: 12px;
-	width: auto;
+	height: 8px;
+	width: 100px;
 }
 
 .preloader-flag span {
-	flex: 0 0 auto;
-	width: 16px;
-	height: 12px;
+	flex: 1;
+	height: 8px;
 	display: block;
 }
 
@@ -9013,12 +9101,9 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .preloader-body {
-	position: absolute;
-	top: 50%;
-	transform: translate3d(0, -50%, 0);
-	left: 0;
-	right: 0;
-	z-index: 10;
+	position: relative;
+	z-index: 15;
+	margin-top: 20px;
 	text-align: center;
 }
 
@@ -14524,7 +14609,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .swiper-button-prev {
 
-  opacity: 0.7;
+  opacity: 0.2;
 
 }
 
@@ -14532,7 +14617,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .swiper:hover .swiper-button-prev {
 
-  opacity: 1;
+  opacity: 0.5;
 
 }
 .swiper-slide {
@@ -15776,7 +15861,7 @@ body {
 
 /* Altezza fissa uguale per tutte le slide */
 .checklist-fixed {
-	min-height: 320px;
+	min-height: 480px;
 	display: flex !important;
 	flex-direction: column;
 	padding: 24px 20px;
@@ -16310,6 +16395,99 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 	padding: 200px 0 170px;
 	border-bottom: none;
 	position: relative;
+	background-image:
+		linear-gradient(90deg, rgba(11, 15, 18, 1) 0%, rgba(11, 15, 18, 0.85) 45%, rgba(11, 15, 18, 0) 100%),
+		url('../images/home_img.png');
+	background-size: cover !important;
+	background-position: right center !important;
+	background-repeat: no-repeat !important;
+}
+
+/* Watermark logo in penombra nell'hero homepage */
+.hero-watermark {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 70px; /* spazio tra menu e badge "Sistema certificato" */
+	opacity: 0.12;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.hero-watermark img {
+	width: 120px;
+}
+
+/* Su schermi < 390px tutto nascosto */
+@media (max-width: 389.98px) {
+	.hero-watermark {
+		display: none;
+	}
+	.hero-watermark-mobile {
+		display: none;
+	}
+}
+
+/* Watermark in flusso: visibile solo su mobile 390-767px */
+.hero-watermark-mobile {
+	display: none;
+}
+
+@media (min-width: 390px) and (max-width: 767.98px) {
+	.hero-watermark-mobile {
+		display: flex;
+		justify-content: center;
+		opacity: 0.18;
+		pointer-events: none;
+		margin-top: -40px;
+		margin-bottom: 30px;
+	}
+	.hero-watermark-mobile img {
+		width: 90px;
+	}
+}
+
+/* Su tablet/iPad (768-1366px): watermark 600px */
+@media (min-width: 768px) and (max-width: 1366px) {
+	.hero-watermark {
+		left: auto;
+		right: 15%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.hero-watermark img {
+		width: 550px;
+	}
+
+	.hero-watermark-mobile {
+		display: none !important;
+	}
+}
+
+/* Su desktop (>1366px): watermark 800px */
+@media (min-width: 1367px) {
+	.hero-watermark {
+		left: auto;
+		right: 15%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.hero-watermark img {
+		width: 700px;
+	}
+
+	.hero-watermark-mobile {
+		display: none !important;
+	}
+}
+
+/* Nasconde il watermark assoluto su mobile (usa quello in flusso) */
+@media (max-width: 767.98px) {
+	.hero-watermark {
+		display: none;
+	}
 }
 
 /* Colonna contenuto hero - centrata solo su mobile */
@@ -16335,8 +16513,11 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 }
 
 /* Mobile - usa home_mobile.png come immagine */
-
 @media (max-width: 767.98px) {
+	.home-hero::after {
+		height: 50px;
+	}
+
 	.home-hero {
 		padding: 0;
 		min-height: 100vh;
@@ -16348,8 +16529,9 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 		background-image: 
 			linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
 			url('../images/home_mobile.png') !important;
-		background-position: center 20% !important;
+		background-position: right center !important;
 		background-size: cover !important;
+		background-attachment: scroll !important;
 	}
 
 	.home-hero .container {
@@ -16360,7 +16542,7 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 	}
 
 	.home-hero .row {
-		margin-top: 0 !important;
+
 		width: 100%;
 		max-width: 100%;
 	}
@@ -16390,6 +16572,61 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 
 	.home-hero::after {
 		height: 80px;
+	}
+}
+
+/* Tablet - iPad e schermi medi (768px - 1366px): copre tutti gli iPad incluso Pro 12.9" in landscape */
+@media (min-width: 768px) and (max-width: 1366px) {
+	.home-hero {
+		padding: 100px 0 80px;
+		min-height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-image: 
+			linear-gradient(90deg, rgba(11, 15, 18, 0.95) 0%, rgba(11, 15, 18, 0.85) 50%, rgba(11, 15, 18, 0) 100%),
+			url('../images/home_tablet_large.png') !important;
+		background-position: right 5% !important;
+		background-size: cover !important;
+		background-attachment: scroll !important;
+		background-repeat: no-repeat !important;
+	}
+
+	.home-hero .container {
+		width: 100%;
+		padding: 0 30px;
+	}
+
+	.home-hero .row {
+		margin-top: 0 !important;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.hero-content-col {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.home-hero .hero-cta {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 12px;
+		width: 100%;
+	}
+
+	.home-hero .hero-cta .button {
+		width: auto;
+		max-width: none;
+	}
+
+	.home-hero::after {
+		height: 60px;
 	}
 }
 
@@ -16800,12 +17037,23 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 }
 
 .mobile-section-title {
-    color: rgba(255, 255, 255, 0.65);
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-top: 2px; /* slight visual adjustment */
+    margin-top: 2px;
+    display: inline-block;
+    padding: 6px 12px;
+    background: linear-gradient(90deg, rgba(229, 57, 53, 0.15) 0%, rgba(229, 57, 53, 0.08) 100%);
+    border-left: 3px solid #e53935;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-section-title:hover {
+    background: linear-gradient(90deg, rgba(229, 57, 53, 0.25) 0%, rgba(229, 57, 53, 0.15) 100%);
+    padding-left: 16px;
 }
 
 .rd-navbar-static .mobile-section-title {
@@ -16815,4 +17063,427 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 /* Fix vertical centering of the logo against the hamburger icon */
 .rd-navbar-fixed .rd-navbar-brand {
     transform: translateY(-3px); /* Compensa lo spazio visivo occupato dalla bandiera in basso */
+}
+
+
+/* TASK 8: Hide HOME on desktop and disable ACCEDI */
+
+/* Hide HOME link on desktop (min-width: 992px) */
+@media (min-width: 992px) {
+	.rd-navbar-nav .rd-nav-item:has(> a[href="index.html"]) {
+		display: none !important;
+	}
+}
+
+/* Disable ACCEDI button on all screens */
+.rd-nav-item-lock {
+	opacity: 0.4;
+	pointer-events: none;
+}
+
+.rd-nav-item-lock .rd-nav-link-lock {
+	cursor: not-allowed;
+}
+
+
+/* Griglia Caratteristiche Tecniche - Mister Self (stile card come prima sezione) */
+.tech-specs-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	width: 100%;
+}
+
+@media (min-width: 576px) {
+	.tech-specs-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 992px) {
+	.tech-specs-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.tech-specs-grid {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+.tech-spec-card {
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 12px;
+	padding: 28px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 14px;
+	transition: all 0.3s ease;
+}
+
+.tech-spec-card:hover {
+	border-color: rgba(229, 57, 53, 0.35);
+	background: rgba(229, 57, 53, 0.08);
+}
+
+.tech-spec-card .cloud-card-icon {
+	font-size: 32px;
+	color: #e53935;
+}
+
+.tech-spec-card .cloud-card-title {
+	font-size: 18px;
+	font-weight: 700;
+	color: #fff;
+	margin: 0;
+}
+
+.tech-spec-card p {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.65);
+	line-height: 1.5;
+	margin: 0;
+}
+
+
+/* M4 Caratteristiche Tecniche - Griglia piccola con foto a sinistra */
+.m4-specs-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+	margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+	.m4-specs-grid {
+		gap: 20px;
+	}
+}
+
+.m4-spec-card {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	padding: 12px;
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(174, 177, 190, 0.2);
+	border-radius: 6px;
+	transition: all 0.3s ease;
+	text-align: left;
+}
+
+.m4-spec-card:hover {
+	border-color: rgba(229, 57, 53, 0.35);
+	background: rgba(229, 57, 53, 0.08);
+}
+
+.m4-spec-card .check-icon {
+	flex-shrink: 0;
+	font-size: 18px;
+	color: #e53935;
+	margin-top: 2px;
+}
+
+.m4-spec-card p {
+	font-size: 13px;
+	color: #fff;
+	line-height: 1.4;
+	margin: 0;
+}
+
+.m4-spec-card small {
+	display: block;
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.6);
+	margin-top: 3px;
+}
+
+
+/* Mobile logo watermark repositioning */
+@media (max-width: 767.98px) {
+	/* Sposta il logo watermark lontano dal bordo su mobile */
+	.logo-watermark-hero {
+		right: 25px !important;
+		top: 25px !important;
+		transform: none !important;
+		max-width: 200px !important;
+	}
+}
+
+
+/* Footer Improvements */
+.footer-standard {
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+
+.footer-standard-main .row > div {
+	position: relative;
+	padding-bottom: 30px;
+}
+
+@media (max-width: 767.98px) {
+	.footer-standard-main .row > div {
+		text-align: center;
+	}
+}
+
+.footer-standard-main .row > div:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 1px;
+	background: rgba(255, 255, 255, 0.1);
+	display: none;
+}
+
+@media (min-width: 992px) {
+	.footer-standard-main .row > div:not(:last-child)::after {
+		display: none;
+	}
+}
+
+.footer-standard h4 {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 16px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.footer-standard .list-sm li {
+	margin-bottom: 12px;
+	color: rgba(255, 255, 255, 0.75);
+	transition: all 0.3s ease;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.footer-standard .list-sm li a {
+	color: rgba(255, 255, 255, 0.85);
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.footer-standard .list-sm li a:hover {
+	color: #e53935;
+}
+
+.footer-standard .list-sm li.object-inline {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+@media (max-width: 767.98px) {
+	.footer-standard .list-sm li.object-inline {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.footer-standard .list-sm li.object-inline .icon {
+	flex-shrink: 0;
+	margin-top: 3px;
+	color: #e53935;
+	font-size: 16px;
+}
+
+.footer-standard .list-sm li.object-inline span {
+	flex: 1;
+	line-height: 1.5;
+	font-size: 14px;
+}
+
+.footer-logo {
+	margin-bottom: 20px;
+}
+
+.footer-standard-aside {
+	padding-top: 25px;
+	margin-top: 25px;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+@media (min-width: 768px) {
+	.footer-standard-aside {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.footer-standard .rights {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 13px;
+	margin-bottom: 0;
+}
+
+.footer-standard .footer-links {
+	margin-top: 8px;
+}
+
+.footer-standard .footer-links a {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 12px;
+	transition: color 0.3s ease;
+}
+
+.footer-standard .footer-links a:hover {
+	color: #e53935;
+}
+
+.footer-standard .footer-links .sep {
+	color: rgba(255, 255, 255, 0.3);
+	margin: 0 6px;
+}
+
+.footer-standard-aside .footer-right p {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 13px;
+}
+
+/* Group/Social icons */
+.group.group-xs {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.group.group-xs a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 4px;
+	background: rgba(229, 57, 53, 0.12);
+	color: #e53935;
+	transition: all 0.3s ease;
+	font-size: 16px;
+	border: 1px solid rgba(229, 57, 53, 0.2);
+}
+
+.group.group-xs a:hover {
+	background: #e53935;
+	color: #fff;
+	border-color: #e53935;
+	transform: translateY(-2px);
+}
+
+/* ============================================
+   MisterSelf - Griglia Caratteristiche Tecniche
+   ============================================ */
+
+.self-specs-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	width: 100%;
+	margin-top: 10px;
+}
+
+@media (min-width: 576px) {
+	.self-specs-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 992px) {
+	.self-specs-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+	}
+}
+
+.self-spec-card {
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.09);
+	border-radius: 12px;
+	padding: 24px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	transition: all 0.3s ease;
+}
+
+.self-spec-card:hover {
+	border-color: rgba(229, 57, 53, 0.35);
+	background: rgba(229, 57, 53, 0.06);
+	transform: translateY(-2px);
+}
+
+.self-spec-card--pos {
+	border-color: rgba(229, 57, 53, 0.2);
+}
+
+.self-spec-card-header {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.self-spec-icon {
+	font-size: 28px;
+	color: #e53935;
+	margin-bottom: 4px;
+}
+
+.self-spec-card h5 {
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	margin: 0;
+	line-height: 1.3;
+}
+
+.self-spec-brand {
+	font-size: 12px;
+	font-weight: 600;
+	color: rgba(229, 57, 53, 0.85);
+	margin: 0;
+	letter-spacing: 0.02em;
+}
+
+.self-spec-optional {
+	font-size: 11px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.45);
+}
+
+.self-spec-card ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.self-spec-card ul li {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.72);
+	line-height: 1.45;
+}
+
+.self-spec-card ul li .check-icon {
+	flex-shrink: 0;
+	color: #e53935;
+	font-size: 14px;
+	margin-top: 2px;
 }

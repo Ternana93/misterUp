@@ -78,15 +78,22 @@
         </div>
       </header>
 
-    <section class="section section-lg text-center bg-dark-3 pd50">
-        <div class="container">
+    <section class="section section-lg text-center bg-dark-3 pd50" style="background-image: url('images/back2_nero.png'); background-size: cover; background-position: center; position: relative; overflow: hidden;">
+        <!-- OVERLAY NERO (per leggibilità) -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(11,15,18,0.92) 0%, rgba(11,15,18,0.85) 50%, rgba(11,15,18,0.92) 100%); z-index: 0;"></div>
+        <!-- MARCHIO IN PENOMBRA TRAMITE CSS -->
+        <div class="logo-watermark-hero" style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%); opacity: 0.05; pointer-events: none; z-index: 1; max-width: 350px;">
+          <img src="images/icona_logo.png" alt="MisterUp Watermark" style="width: 100%; filter: contrast(120%) brightness(150%); mix-blend-mode: overlay;">
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
             <div class="row row-50 align-items-center">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay=".1s">
                     <!-- il tuo owl resta -->
                     <div class="owl-carousel"
                          data-items="1"
                          data-dots="false"
-                         data-loop="true" >
+                         data-loop="true"
+                         data-autoplay="false">
 
                         <img src="images/m8/m8_1.png"/>
                         <img src="images/m8/m8_2.png"/>
@@ -259,28 +266,30 @@
                                 <span class="wow slideInUp">Caratteristiche tecniche</span>
 
                             </h4>
-                            <ul>
-                                <li>
+                            <div class="m4-specs-grid">
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    PC industriale (CPU Intel i5 - RAM 4Gb - SSD 120 Gb - OS Windows 10)
-                                </li>
-                                <li>
+                                    <p>PC industriale<br><small>CPU Intel i5 - RAM 4Gb - SSD 120 Gb - OS Windows 10)
+                                </small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Monitor touch screen 16.9 da 10.1'
-                                </li>
-                                <li>
+                                    <p>Monitor touch screen 16.9 da 10.1'</p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Gruppo di continuità (UPS) da 1200VA
-                                </li>
-                                <li>
+                                    <p>Gruppo di continuità<br><small>UPS) da 1200VA
+                                </small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Software "INTELLIGENTE" integrato per la gestione completa della macchina
-                                </li>
-                                <li>
+                                    <p>Software "INTELLIGENTE" integrato per la gestione completa della macchina</p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Account personale nel cloud per il controllo da remoto
-                                </li>
-                            </ul>
+                                    <p>Account personale nel cloud per il controllo da remoto</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -316,27 +325,43 @@
 
 
 
-                        <div class="owl-carousel wow slideInLeft"
+                        <div class="owl-carousel owl-checklist wow slideInLeft"
                              data-items="1"
                              data-dots="false"
                              data-nav="false"
                              data-loop="true"
                              data-margin="30"
                              data-stage-padding="0"
-                             data-mouse-drag="true">
+                             data-mouse-drag="true"
+                             data-autoplay="false">
                             <!-- SLIDE 1 -->
                             <div class="checklist">
                                 <h4 class="mb-2">Riciclatore di monete</h4>
                                 <p class="checklist-subtitle mb-3">
                                     <b>Innovative Technology - SMART Coin System</b>
                                 </p>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione/erogazione: 0,02 € - 0,05 € - 0,10 € - 0,20 € - 0,50 € - 1,00 € - 2,00 € (configurabili)</li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità monete riciclo: 2000 pz totali</li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità monete cassetto: 300 pz</li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione/erogazione: monete multiple</li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 12 monete/secondo</li>
-                                </ul>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in accettazione/erogazione: 0,02 € - 0,05 € - 0,10 € - 0,20 € - 0,50 € - 1,00 € - 2,00 € (configurabili)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità monete riciclo: 2000 pz totali</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità monete cassetto: 300 pz</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità accettazione/erogazione: monete multiple</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità accettazione/erogazione: 12 monete/secondo</p>
+                                    </div>
+                                </div>
                             </div>
                             <!-- SLIDE 2 -->
                             <div class="checklist">
@@ -344,23 +369,36 @@
                                 <p class="checklist-subtitle mb-3">
                                     <b>CPI/MEI - BNR Advance 320 (M6):</b>
                                 </p>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote riciclo: 180 pz totali (60 pz per due tagli e 30 pz per gli altri due tagli; configurabili)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote cassetto: 600 pz
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione: singola banconota
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità erogazione: mazzetta (fino a 15 banconote insieme)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 3 banconota/secondo
-
-                                    </li>
-                                </ul>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote riciclo: 180 pz totali (60 pz per due tagli e 30 pz per gli altri due tagli; configurabili)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote cassetto: 600 pz</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità accettazione: singola banconota</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità erogazione: mazzetta (fino a 15 banconote insieme)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità accettazione/erogazione: 3 banconota/secondo</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="checklist">
@@ -369,21 +407,32 @@
                                     <b>JCM – UBA ProRQ (M6.2):
                                     </b>
                                 </p>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote riciclo: 180 pz totali (60 pz per ogni taglio)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote cassetto: 400 pz
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione/erogazione: singola banconota
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 2 banconota/secondo
-                                    </li>
-
-                                </ul>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote riciclo: 180 pz totali (60 pz per ogni taglio)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote cassetto: 400 pz</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità accettazione/erogazione: singola banconota</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità accettazione/erogazione: 2 banconota/secondo</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="checklist">
@@ -392,23 +441,36 @@
                                     <b>GRG BR-15 (M6.3):
                                     </b>
                                 </p>
-                                <ul>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote riciclo: 0 pz totali (80 pz per due tagli e 50 pz per gli altri due tagli; configurabili)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Capacità banconote cassetto: 1000 pz
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità accettazione: singola banconota
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Modalità erogazione: mazzetta (fino a 15 banconote insieme)
-                                    </li>
-                                    <li><span class="check-icon linearicons-check"></span>Velocità accettazione/erogazione: 3 banconota/secondo
-                                    </li>
-
-                                </ul>
+                                <div class="m4-specs-grid">
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in accettazione: 5,00 € - 10,00 € - 20,00 € - 50,00 € - 100,00 € - 200,00 € - 500,00 €</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Tagli in erogazione: n° 4 tagli in riciclo configurabili (predefiniti 5,00 € - 10,00 € - 20,00 € - 50,00 €)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote riciclo: 0 pz totali (80 pz per due tagli e 50 pz per gli altri due tagli; configurabili)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Capacità banconote cassetto: 1000 pz</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità accettazione: singola banconota</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Modalità erogazione: mazzetta (fino a 15 banconote insieme)</p>
+                                    </div>
+                                    <div class="m4-spec-card">
+                                        <span class="check-icon linearicons-check"></span>
+                                        <p>Velocità accettazione/erogazione: 3 banconota/secondo</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="checklist checklist-fixed">
@@ -445,7 +507,8 @@
                         <div class="owl-carousel"
                              data-items="1"
                              data-dots="false"
-                             data-loop="true" >
+                             data-loop="true"
+                             data-autoplay="false">
 
                             <img src="images/m8/m8_1.png"/>
                             <img src="images/m8/m8_2.png"/>
@@ -475,26 +538,24 @@
                             <h5 class="text-muted mb-3 align-center">
                                 Piccola, pratica e veloce
                             </h5>
-                            <ul>
-                                <li>
+                            <div class="m4-specs-grid">
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Altezza : <b>35 cm</b>
-                                </li>
-                                <li>
+                                    <p>Altezza<br><small>35 cm</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Larghezza : <b>61 cm</b>
-                                </li>
-                                <li>
+                                    <p>Larghezza<br><small>61 cm</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Profondità : <b>56,5 cm</b>
-                                </li>
-                                <li>
+                                    <p>Profondità<br><small>56,5 cm</small></p>
+                                </div>
+                                <div class="m4-spec-card">
                                     <span class="check-icon linearicons-check"></span>
-                                    Peso : <b>70 Kg</b>
-                                </li>
-
-
-                            </ul>
+                                    <p>Peso<br><small>70 Kg</small></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -615,8 +676,8 @@
                             <div class="group group-xs mt-3">
                                 <a class="icon icon-sm icon-creative mdi mdi-facebook" href="#"></a>
                                 <a class="icon icon-sm icon-creative mdi mdi-instagram" href="#"></a>
-                                <a class="icon icon-sm icon-creative mdi mdi-linkedin" href="#"></a>
-                                <a class="icon icon-sm icon-creative mdi mdi-youtube" href="#"></a>
+                                <a class="icon icon-sm icon-creative mdi mdi-whatsapp" href="#"></a>
+                                <a class="icon icon-sm icon-creative mdi mdi-youtube-play" href="#"></a>
                             </div>
                         </div>
                     </div>

@@ -81,19 +81,24 @@
         </div>
       </header>
       <!-- HERO MODERNO -->
-      <section class="section chisiamo-hero home-hero bg-dark-1" style="background-image: url('images/home_img.png'); background-size: cover; background-position: center; position: relative;">
+      <section class="section chisiamo-hero home-hero bg-dark-1">
         <!-- OVERLAY NERO (A SINISTRA) -->
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(11,15,18,1) 0%, rgba(11,15,18,0.85) 45%, rgba(11,15,18,0) 100%); z-index: 0;"></div>
         <!-- MARCHIO IN PENOMBRA TRAMITE CSS -->
-        <div style="position: absolute; right: 15%; top: 50%; transform: translateY(-50%); opacity: 0.08; pointer-events: none; z-index: 1;">
-          <img src="images/icona_logo.png" alt="MisterUp Watermark" style="width: 800px; filter: contrast(120%) brightness(150%); mix-blend-mode: overlay;">
+        <div class="hero-watermark">
+          <img src="images/icona_logo.png" alt="MisterUp Watermark" style="filter: contrast(120%) brightness(150%); mix-blend-mode: overlay;">
         </div>
         <!-- L'overlay nero è stato rimosso in modo che la griglia e i bagliori siano visibili -->
         <div class="container hero-modern-content" style="z-index: 3; position: relative;">
 
           <!-- Aggiunto margin-top negativo per ridurre lo spazio dal menu -->
-          <div class="row align-items-center justify-content-center" style="margin-top: -100px;">
-            <div class="col-lg-7 hero-content-col">
+          <div class="row align-items-center justify-content-start" style="margin-top: -100px;">
+            <div class="col-lg-6 hero-content-col">
+
+              <!-- Logo watermark in flusso, visibile solo su mobile >=390px -->
+              <div class="hero-watermark-mobile">
+                <img src="images/icona_logo.png" alt="MisterUp" style="filter: contrast(120%) brightness(150%); mix-blend-mode: overlay;">
+              </div>
 
               <!-- Badge -->
               <div class="hero-badge wow fadeIn">
@@ -256,7 +261,8 @@
                                              data-items="1"
                                              data-dots="false"
                                              data-nav="false"
-                                             data-loop="true">
+                                             data-loop="true"
+                                             data-autoplay="false">
 
                                             <img src="images/m4/m4_0.png"/>
                                             <img src="images/m4/m4_1.png"/>
@@ -313,7 +319,8 @@
                                              data-items="1"
                                              data-dots="false"
                                              data-nav="false"
-                                             data-loop="true">
+                                             data-loop="true"
+                                             data-autoplay="false">
 
                                             <img src="images/misterup/MISTER_UPm4.png"/>
                                             <img src="images/misterup/MISTER_UPm4.png"/>
@@ -438,7 +445,7 @@
 
         <section id="vantaggi" class="section section-lg text-center bg-dark-2 pd50">
             <div class="container">
-                <h3 class="section-title fw400 wow-outer"><span class="wow slideInUp">Vantaggi di Mister<span style="color:#e53935">Up</span> per l'esercente</span></h3>
+                <h3 class="section-title fw400 wow-outer"><span class="wow slideInUp">Vantaggi di Mister Up per l'esercente</span></h3>
                 <div style="margin-bottom:20px;" class="quote-modern-text">
                     <p style="font-size:20px;font-weight:200"> Sistema di Pagamento Automatico Zero Pensieri</p>
                 </div>
@@ -792,8 +799,8 @@
                             <div class="group group-xs mt-3">
                                 <a class="icon icon-sm icon-creative mdi mdi-facebook" href="#"></a>
                                 <a class="icon icon-sm icon-creative mdi mdi-instagram" href="#"></a>
-                                <a class="icon icon-sm icon-creative mdi mdi-linkedin" href="#"></a>
-                                <a class="icon icon-sm icon-creative mdi mdi-youtube" href="#"></a>
+                                <a class="icon icon-sm icon-creative mdi mdi-whatsapp" href="#"></a>
+                                <a class="icon icon-sm icon-creative mdi mdi-youtube-play" href="#"></a>
                             </div>
                         </div>
                     </div>
