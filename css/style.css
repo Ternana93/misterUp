@@ -15795,6 +15795,9 @@ body {
 	font-size: 16px;
 	line-height: 1;
 	transition: background 0.2s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
 }
 
@@ -17486,4 +17489,13 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 	color: #e53935;
 	font-size: 14px;
 	margin-top: 2px;
+}
+
+/* Prevent selection on Swiper buttons too */
+.swiper-button-next,
+.swiper-button-prev {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
