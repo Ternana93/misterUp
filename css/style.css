@@ -15900,6 +15900,7 @@ body {
 	color: #e53935;
 	line-height: 1;
 	margin-bottom: 6px;
+	display: none;
 }
 
 .checklist-subtitle {
@@ -16195,6 +16196,7 @@ body {
 	font-size: 32px;
 	line-height: 1;
 	margin-bottom: 4px;
+	color: inherit;
 }
 
 .cloud-card-title {
@@ -17140,6 +17142,8 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 	text-align: center;
 	gap: 14px;
 	transition: all 0.3s ease;
+	height: 280px;
+	justify-content: space-between;
 }
 
 .tech-spec-card:hover {
@@ -17149,7 +17153,24 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 
 .tech-spec-card .cloud-card-icon {
 	font-size: 32px;
-	color: #e53935;
+	color: #e53935 !important;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	min-height: 40px;
+	margin-bottom: 0;
+	flex-shrink: 0;
+}
+
+.tech-spec-card .cloud-card-icon span {
+	color: #e53935 !important;
+	font-size: 32px !important;
+}
+
+.tech-spec-card [class*="linearicons-"] {
+	color: #e53935 !important;
 }
 
 .tech-spec-card .cloud-card-title {
@@ -17157,13 +17178,23 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 	font-weight: 700;
 	color: #fff;
 	margin: 0;
+	flex-grow: 0;
+	flex-shrink: 0;
+	line-height: 1.2;
 }
 
 .tech-spec-card p {
 	font-size: 14px;
 	color: rgba(255, 255, 255, 0.65);
-	line-height: 1.5;
+	line-height: 1.4;
 	margin: 0;
+	flex-grow: 1;
+	flex-shrink: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	word-wrap: break-word;
 }
 
 
