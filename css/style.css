@@ -8494,10 +8494,6 @@ html [class*='section-'].section-bottom-0 {
 	display: inline-block;
 }
 
-.object-inline > * + * {
-	margin-left: 11px;
-}
-
 .wow-outer .object-inline span {
 	display: inline-block;
 }
@@ -17355,7 +17351,6 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 
 .footer-standard .list-sm li.object-inline .icon {
 	flex-shrink: 0;
-	margin-top: 3px;
 	color: #e53935;
 	font-size: 16px;
 }
@@ -17565,5 +17560,9 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link .nav-icon {
 	}
 	.footer-standard-main .col-lg-3:nth-child(3) {
 		padding-left: 80px;
+	}
+
+	.footer-standard-main li a {
+	    margin-left : 30px;
 	}
 }
