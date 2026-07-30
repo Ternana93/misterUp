@@ -16052,9 +16052,21 @@ body {
 .checklist-header {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	margin-bottom: 18px;
 	gap: 4px;
+}
+
+@media (min-width: 992px) {
+	.checklist-header {
+		flex-direction: row;
+		align-items: baseline;
+		gap: 8px;
+	}
+	
+	.checklist-header .mb-1 + .checklist-subtitle::before {
+		content: " - ";
+	}
 }
 
 .checklist-icon {
@@ -16066,8 +16078,7 @@ body {
 }
 
 .checklist-subtitle {
-	font-size: 13px;
-	color: rgba(255,255,255,0.55);
+	font-size: 15px;
 	margin: 0;
 }
 
