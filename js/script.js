@@ -712,20 +712,48 @@
 							}
 						},
 						onDropdownOver: function () {
-							return !isNoviBuilder;
+							return false;
 						},
 						onDropdownLeave: function () {
-							return !isNoviBuilder;
+							return false;
 						}
 					}
 				});
 
-				// Make entire menu item clickable to open dropdown on mobile
-				$rdNavbar.on('click', '.rd-navbar-fixed .rd-nav-item.rd-navbar-submenu', function(e) {
+				// Make dropdown clickable on desktop
+				$(document).on('click', '.rd-navbar-static .rd-nav-item.rd-navbar-submenu > .rd-nav-link', function(e) {
 					e.preventDefault();
 					e.stopPropagation();
-					$(this).toggleClass('opened');
+					var $parent = $(this).parent();
+					$parent.toggleClass('opened');
+					return false;
 				});
+
+				// Make mobile dropdown toggle work
+				$(document).on('click touchstart', '.rd-navbar-fixed .rd-nav-item.rd-navbar-submenu > .rd-nav-link', function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					var $parent = $(this).parent();
+					$parent.toggleClass('opened');
+					return false;
+				});
+
+				// Close dropdown when clicking outside on desktop
+				$(document).on('click', function(e) {
+					if (!$(e.target).closest('.rd-navbar-static .rd-nav-item.rd-navbar-submenu').length) {
+						$('.rd-navbar-static .rd-nav-item.rd-navbar-submenu').removeClass('opened');
+					}
+				});
+
+				// Make CASSE AUTOMATICHE active on desktop when on submenu page
+				var currentPage = window.location.pathname.split('/').pop();
+				var submenuPages = ['m4.html', 'm6.html', 'm8.html', 'm9.html', 'm11.html', 'misterSelf.html', 'totem.html'];
+				
+				if (submenuPages.includes(currentPage)) {
+					$('.rd-navbar-static .rd-nav-item.rd-navbar-submenu').addClass('active');
+				} else {
+					$('.rd-navbar-static .rd-nav-item.rd-navbar-submenu').removeClass('active');
+				}
 
 				if ($rdNavbar.attr("data-body-class")) {
 					document.body.className += ' ' + $rdNavbar.attr("data-body-class");
@@ -733,6 +761,18 @@
 
 			}
 		}
+
+		// Auto-expand submenu on mobile when menu is opened if current page is in the submenu
+		$(document).on('click', '.rd-navbar-toggle', function() {
+			setTimeout(function() {
+				var currentPage = window.location.pathname.split('/').pop();
+				var submenuPages = ['m4.html', 'm8.html', 'm9.html', 'm11.html', 'misterSelf.html', 'totem.html'];
+				
+				if (submenuPages.includes(currentPage)) {
+					$('.rd-navbar-fixed .rd-nav-item.rd-navbar-submenu').addClass('opened');
+				}
+			}, 100);
+		});
 
 		// RD Input Label
 		if (plugins.rdInputLabel.length) {

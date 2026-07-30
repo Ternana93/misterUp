@@ -9513,10 +9513,53 @@ html.tablet .ui-to-top {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 40px;
+	width: 100%;
 	height: 100%;
 	cursor: pointer;
 	z-index: 10;
+}
+
+.rd-navbar-fixed .rd-navbar-submenu.opened > .rd-navbar-submenu-toggle {
+	pointer-events: none;
+}
+
+.rd-navbar-static .rd-navbar-submenu-toggle {
+	display: none !important;
+}
+
+.rd-navbar-static .rd-nav-item.rd-navbar-submenu {
+	position: relative;
+}
+
+.rd-navbar-static .rd-nav-item.rd-navbar-submenu > .rd-nav-link {
+	position: relative;
+	padding-right: 25px;
+}
+
+.rd-navbar-static .rd-nav-item.rd-navbar-submenu > .rd-nav-link::after {
+	content: '';
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 8px solid #fff;
+	transition: transform 0.3s ease, border-color 0.3s ease;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.rd-navbar-static .rd-nav-item.rd-navbar-submenu:hover > .rd-nav-link::after,
+.rd-navbar-static .rd-nav-item.rd-navbar-submenu.opened > .rd-nav-link::after {
+	border-top-color: #e53935;
+}
+
+.rd-navbar-static .rd-nav-item.rd-navbar-submenu.opened > .rd-nav-link::after {
+	border-top: none;
+	border-bottom: 8px solid #e53935;
 }
 
 .rd-navbar-fixed .rd-nav-item.rd-navbar-submenu {
@@ -9559,13 +9602,13 @@ html.tablet .ui-to-top {
 	color: #e53935 !important;
 }
 
-html .page .rd-navbar-static .rd-navbar-dropdown li.active {
+html .page .rd-navbar-static .rd-navbar-dropdown > li.active {
 	background: rgba(229, 57, 53, 0.3) !important;
 	border-radius: 4px !important;
 	padding: 10px 18px !important;
 }
 
-html .page .rd-navbar-static .rd-navbar-dropdown li.active > a.rd-nav-link {
+html .page .rd-navbar-static .rd-navbar-dropdown > li.active > a.rd-nav-link {
 	padding: 0 !important;
 	background: transparent !important;
 	color: #fff !important;
@@ -9796,6 +9839,8 @@ html .page .rd-navbar-static .rd-navbar-dropdown li.active > a.rd-nav-link {
 	position: absolute;
 	left: 0;
 	width: 290px;
+	padding: 23px 0 27px;
+	padding-left: 15px;
 	background: #242424;
 	z-index: 5;
 }
@@ -15696,10 +15741,6 @@ body {
 	white-space: nowrap;
 }
 
-.rd-navbar-static .rd-nav-item + .rd-nav-item {
-	margin-left: 0 !important;
-}
-
 .rd-navbar-static .rd-navbar-main {
 	min-width: 0;
 }
@@ -15859,12 +15900,22 @@ body {
 	font-weight: 700 !important;
 	background: rgba(229, 57, 53, 0.25) !important;
 	border-radius: 4px;
-	padding: 4px 8px;
 }
 
 .rd-navbar-static .rd-nav-item.active .rd-nav-link .nav-icon {
 	color: #ffffff !important;
 }
+
+/* Prevent dropdown nav-links from inheriting active style when parent submenu is active */
+.rd-navbar-static .rd-nav-item.rd-navbar-submenu.active .rd-navbar-dropdown .rd-nav-link {
+	color: inherit !important;
+	font-weight: inherit !important;
+	background: transparent !important;
+	border-radius: inherit !important;
+}
+
+/* Fix arrow positioning when submenu is active - remove padding effect */
+
 
 /*
  * Fix carosello prodotti: ogni slide centrata
@@ -16496,8 +16547,7 @@ html .page .rd-navbar-static .rd-nav-item.active > .rd-nav-link,
 html .page .rd-navbar-static .rd-nav-item.active > a.rd-nav-link {
 	background: rgba(229, 57, 53, 0.3) !important;
 	border-radius: 4px !important;
-	padding-left: 8px !important;
-	padding-right: 8px !important;
+	
 	font-weight: 700 !important;
 	color: #fff !important;
 }
