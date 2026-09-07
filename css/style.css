@@ -15222,6 +15222,13 @@ text-align: center;
   padding: 20px 0;
 }
 
+@media (min-width: 768px) {
+  .promo-swiper .swiper-button-next,
+  .promo-swiper .swiper-button-prev {
+    display: none;
+  }
+}
+
 .post-tiny img {
 
   width: 100%;
@@ -16075,6 +16082,10 @@ body {
 	line-height: 1;
 	margin-bottom: 6px;
 	display: none;
+}
+
+.mt50{
+    margin-top:50px;
 }
 
 .checklist-subtitle {
