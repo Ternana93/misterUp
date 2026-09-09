@@ -88,6 +88,36 @@
         </div>
       </section>
 
+      <!-- CAROUSEL SECTION -->
+      <section class="section section-lg bg-dark-1 pd70">
+        <div class="container">
+          <div class="carousel-wrapper" style="background: rgba(0, 0, 0, 0.4); border: 2px solid #666; border-radius: 16px; padding: 30px; position: relative;">
+            <div class="swiper mySwiper-cloud" style="width: 100%; height: auto;">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/misterCloud/misterCloud1.JPG" alt="Mister Cloud 1" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/misterCloud/misterCloud2.JPG" alt="Mister Cloud 2" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/misterCloud/misterCloud3.JPG" alt="Mister Cloud 3" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/misterCloud/misterCloud4.JPG" alt="Mister Cloud 4" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/misterCloud/misterCloud5.JPG" alt="Mister Cloud 5" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                </div>
+              </div>
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-next come-next"></div>
+              <div class="swiper-button-prev come-prev"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 4 CARD INFO -->
       <section class="section section-lg bg-dark-2 pd70">
         <div class="container">
@@ -326,5 +356,17 @@
     <script src="js/core.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Initialize Swiper for Mister Cloud carousel
+      const swiperCloud = new Swiper('.mySwiper-cloud', {
+        loop: true,
+        navigation: {
+          nextEl: '.mySwiper-cloud .swiper-button-next',
+          prevEl: '.mySwiper-cloud .swiper-button-prev',
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+      });
+    </script>
   </body>
 </html>
