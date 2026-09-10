@@ -169,28 +169,7 @@
                     </div>
                     <div class="col-md-10 col-lg-6 wow-outer">
                         <div class="col-md-10 col-lg-12 wow-outer">
-                            <div class="thumbnail-video-1 bg-dark-1 wow slideInLeft" style="position: relative; background-image: url('images/icona_logo.png'); background-size: 200px; background-position: center; background-repeat: no-repeat;">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe
-                                            width="560"
-                                            height="315"
-                                            src=""
-                                            title="Ecco un video di presentazione"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen>
-                                    </iframe>
-
-                                </div>
-                                <!-- Cover Video Bloccato -->
-                                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(21,21,21,0.92) 0%, rgba(21,21,21,0.85) 50%, rgba(21,21,21,0.92) 100%); display: flex; align-items: center; justify-content: center; z-index: 10; border-radius: 8px;">
-                                    <div style="text-align: center; color: #fff;">
-                                        <div style="font-size: 48px; margin-bottom: 20px;">🔒</div>
-                                        <h3 style="font-size: 28px; font-weight: 600; margin-bottom: 10px;">Prossimamente un nuovo video!!</h3>
-                                        <p style="font-size: 16px; color: #aaa;">Il video sarà disponibile a breve. Rimani connesso!</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="images/home_it.JPG" alt="MisterUp Home" style="width: 100%; height: auto; border-radius: 8px; display: block;">
                         </div>
                     </div>
                 </div>
@@ -763,7 +742,52 @@
             </div>
         </section>
 
-        <section class="section text-center bg-dark-2 pd70">
+        <!-- PARTNER SECTION -->
+        <section class="section section-lg bg-dark-2 pd70">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h3 class="section-title wow slideInUp">I nostri partner</h3>
+                    <p class="text-muted wow slideInUp" data-wow-delay=".1s" style="max-width: 600px; margin: 0 auto; font-size: 16px;">
+                        Da anni collaboriamo con i principali partner e sponsor del settore partecipando attivamente a fiere ed eventi organizzati da loro. Scopri le aziende con cui lavoriamo e innoviamo nel commercio.
+                    </p>
+                </div>
+
+                <!-- SCHERMO GRANDE: 3 immagini allineate (visibili da 992px in su) -->
+                <div class="d-none d-lg-flex justify-content-center align-items-center" style="gap: 40px;">
+                    <div class="partner-item wow slideInLeft" data-wow-delay=".1s">
+                        <img src="images/partner1.png" alt="Partner 1" style="max-height: 120px; width: auto; object-fit: contain;">
+                    </div>
+                    <div class="partner-item wow slideInUp" data-wow-delay=".2s">
+                        <img src="images/partner2.jpg" alt="Partner 2" style="max-height: 120px; width: auto; object-fit: contain;">
+                    </div>
+                    <div class="partner-item wow slideInRight" data-wow-delay=".3s">
+                        <img src="images/partner3.jpg" alt="Partner 3" style="max-height: 120px; width: auto; object-fit: contain;">
+                    </div>
+                </div>
+
+                <!-- SCHERMO PICCOLO: Carosello circolare (visibile solo su mobile/tablet) -->
+                <div class="d-lg-none">
+                    <div class="swiper partners-swiper" style="position: relative;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+                                <img src="images/partner1.png" alt="Partner 1" style="max-height: 100px; width: auto; object-fit: contain;">
+                            </div>
+                            <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+                                <img src="images/partner2.jpg" alt="Partner 2" style="max-height: 100px; width: auto; object-fit: contain;">
+                            </div>
+                            <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center;">
+                                <img src="images/partner3.jpg" alt="Partner 3" style="max-height: 100px; width: auto; object-fit: contain;">
+                            </div>
+                        </div>
+                        <!-- Navigation Arrows -->
+                        <div class="swiper-button-next partners-next"></div>
+                        <div class="swiper-button-prev partners-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section text-center bg-dark-4 pd70">
             <div class="container">
                 <h3 class="section-title wow slideInLeft" data-wow-delay=".1s" >Cerchi casse rendiresto automatiche per la tua attività?</h3>
                 <div class="row align-items-center">
@@ -1117,6 +1141,16 @@
 
           }
 
+        });
+
+        new Swiper(".partners-swiper", {
+          loop: true,
+          navigation: {
+            nextEl: ".partners-swiper .swiper-button-next",
+            prevEl: ".partners-swiper .swiper-button-prev",
+          },
+          slidesPerView: 1,
+          spaceBetween: 20,
         });
 
     </script>

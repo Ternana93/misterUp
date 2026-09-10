@@ -14982,13 +14982,21 @@ text-align: center;
 
 .bg-dark-3 { background: #1e1e1e; color:#fff; }
 
+.bg-dark-4 { background: #1f1e1e; color:#fff; }
+
+
 .bg-dark-1 h3,span,h4,a {  color:#fff }
+
+.bg-dark-4 h3,span,h4,a {  color:#fff }
 
 .bg-dark-home h3,span,h4 {  color:#fff }
 
 .bg-dark-2 h3 { color:#fff }
 
 .bg-dark-3 h3 { color:#fff }
+}
+
+.bg-dark-4 h3 { color:#fff }
 }
 
 .section-overlap-image::after {
