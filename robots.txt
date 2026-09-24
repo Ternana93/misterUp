@@ -1,0 +1,28 @@
+# MisterUp Robots.txt
+# Allow all legitimate crawlers
+
+User-agent: *
+Allow: /
+Disallow: /bat/
+Disallow: *.php
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+Allow: /css/
+Allow: /images/
+Allow: /js/
+Allow: /fonts/
+
+User-agent: Bingbot
+Allow: /
+Allow: /css/
+Allow: /images/
+Allow: /js/
+Allow: /fonts/
+
+# Crawl-delay (optional - adjust as needed)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://misterup.it/sitemap.xml
