@@ -85,23 +85,29 @@
         </div>
       </header>
 
-      <!-- HERO ASSISTENZA -->
-      <section class="section home-hero bg-dark-1" style="padding: 0; margin-top: 0; overflow: hidden; position: relative;">
-        <img src="images/assistenza.jpg" alt="Assistenza" style="width: 100%; height: auto; display: block; object-fit: cover; position: relative; z-index: 0;">
+      <!-- HERO ASSISTENZA - RESPONSIVE -->
+      <section class="section bg-dark-1" style="padding: 0; margin-top: 0; overflow: hidden; position: relative;">
+        <img src="images/assistenza.jpg" alt="Assistenza" style="width: 100%; height: auto; display: block; object-fit: cover; position: relative; z-index: 0; max-height: 300px; object-position: center;">
+        <style>
+          @media (min-width: 768px) {
+            .section.assistenza-hero { max-height: none; }
+            .section.assistenza-hero img { max-height: none; }
+          }
+        </style>
       </section>
 
-      <!-- H1 + INTRO ASSISTENZA -->
-      <section class="section section-sm bg-dark-2 pd30">
+      <!-- H3 INTRO ASSISTENZA (CENTRATO) -->
+      <section class="section section-sm bg-dark-2 pd30 text-center">
         <div class="container">
-          <h1 class="section-title wow slideInUp" data-wow-delay=".1s">Assistenza Tecnica MisterUp</h1>
-          <p class="text-muted text-center mb-0 wow slideInUp" data-wow-delay=".15s">
+          <h3 class="section-title wow slideInUp" data-wow-delay=".1s">Assistenza Tecnica MisterUp</h3>
+          <p class="text-muted mb-0 wow slideInUp" data-wow-delay=".15s">
             Tutti i sistemi MisterUp sono supportati da un'assistenza tecnica evoluta e continuativa. Con il nostro monitoraggio remoto via Cloud, garantiamo interventi rapidi, 7 giorni su 7, per mantenere la tua attività sempre operativa e senza interruzioni.
           </p>
         </div>
       </section>
 
       <!-- 4 CARD ASSISTENZA -->
-      <section class="section section-lg bg-dark-2 pd70">
+      <section class="section section-lg bg-dark-2 pd70" style="margin-top:-50px;">
         <div class="container">
           <div class="row row-40">
 
@@ -151,39 +157,39 @@
       <!-- SEZIONE CONTATTI + FORM -->
       <section class="section text-center bg-dark-2 pd70">
         <div class="container">
-          <h3 class="section-title wow slideInLeft" data-wow-delay=".1s">Contatta il nostro team di <span style="color:#e53935;">Assistenza</span></h3>
+          <h3 class="section-title wow slideInUp" data-wow-delay=".1s">Contatta il nostro team di <span style="color:#e53935;">Assistenza</span></h3>
           <h5 class="text-muted mb-3 align-center">Siamo disponibili 7 su 7 per supportarti</h5>
 
           <div class="row align-items-center mt-4">
 
-            <!-- Info contatti -->
-            <div class="col-lg-5 mb-5 mb-lg-0 wow slideInLeft" data-wow-delay=".1s">
+            <!-- Info contatti - CENTRATO su mobile, sinistra su desktop -->
+            <div class="col-12 col-lg-5 mb-5 mb-lg-0 text-center wow slideInUp" data-wow-delay=".1s">
               <div class="form-icon mb-4"><span class="linearicons-headset"></span></div>
 
-              <div class="checklist wow slideInLeft" data-wow-delay=".1s">
+              <div class="checklist wow slideInUp" data-wow-delay=".1s">
                 <h4 class="mb-4">Come raggiungerci</h4>
-                <ul>
-                  <li>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; align-items: center;">
+                  <li class="mb-3">
                     <span class="check-icon mdi mdi-phone"></span>
                     <strong>Amministr.</strong>&nbsp;&nbsp;<a href="tel:07441963349">07441963349</a>
                   </li>
-                  <li>
+                  <li class="mb-3">
                     <span class="check-icon mdi mdi-phone"></span>
                     <strong>Marketing</strong>&nbsp;&nbsp;<a href="tel:3664320619">3664320619</a>
                   </li>
-                  <li>
+                  <li class="mb-3">
                     <span class="check-icon mdi mdi-email-outline"></span>
                     <strong>Amministr.</strong>&nbsp;&nbsp;<a href="mailto:cashitaly@gmail.com">cashitaly@gmail.com</a>
                   </li>
-                  <li>
+                  <li class="mb-3">
                     <span class="check-icon mdi mdi-email-outline"></span>
                     <strong>Marketing</strong>&nbsp;&nbsp;<a href="mailto:marketingcashitaly@gmail.com">marketingcashitaly@gmail.com</a>
                   </li>
-                  <li>
+                  <li class="mb-3">
                     <span class="check-icon fa fa-whatsapp"></span>
                     <strong>WhatsApp</strong>&nbsp;&nbsp;<a href="https://wa.me/393408045576">3408045576</a>
                   </li>
-                  <li>
+                  <li class="mb-3">
                     <span class="check-icon linearicons-clock"></span>
                     <strong>Assistenza:</strong>&nbsp;&nbsp;7 su 7
                   </li>
@@ -195,15 +201,15 @@
               </div>
 
               <!-- Slogan citazione -->
-              <div class="quote-misterpos mt-4 wow slideInLeft" data-wow-delay=".2s">
+              <div class="quote-misterpos mt-4 wow slideInUp" data-wow-delay=".2s">
                 <span class="quote-misterpos-icon linearicons-quote-open"></span>
                 <p class="quote-misterpos-text">Non vendiamo solo macchine. Garantiamo continuità operativa.</p>
                 <p class="quote-misterpos-sub">Il team MisterUp — By Cash Italy</p>
               </div>
             </div>
 
-            <!-- Form -->
-            <div class="col-lg-7 wow slideInLeft" data-wow-delay=".1s">
+            <!-- Form - CENTRATO su mobile, destra su desktop -->
+            <div class="col-12 col-lg-7 wow slideInUp" data-wow-delay=".1s">
               <div class="form-box">
                 <h4 class="mb-4 text-center form-title">
                   <span class="form-title-icon linearicons-envelope"></span>
@@ -211,12 +217,12 @@
                 </h4>
                 <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
                   <div class="row">
-                    <div class="col-md-6 mb-3"><input class="form-input" type="text" name="name" placeholder="Nome" data-constraints="@Required"></div>
-                    <div class="col-md-6 mb-3"><input class="form-input" type="text" name="surname" placeholder="Cognome" data-constraints="@Required"></div>
-                    <div class="col-md-6 mb-3"><input class="form-input" type="email" name="email" placeholder="Email" data-constraints="@Email @Required"></div>
-                    <div class="col-md-6 mb-3"><input class="form-input" type="text" name="phone" placeholder="Telefono" data-constraints="@Numeric @Required"></div>
-                    <div class="col-md-6 mb-3"><input class="form-input" type="text" name="activity" placeholder="Tipo di attività"></div>
-                    <div class="col-md-6 mb-3"><input class="form-input" type="text" name="model" placeholder="Modello dispositivo"></div>
+                    <div class="col-12 col-md-6 mb-3"><input class="form-input" type="text" name="name" placeholder="Nome" data-constraints="@Required"></div>
+                    <div class="col-12 col-md-6 mb-3"><input class="form-input" type="text" name="surname" placeholder="Cognome" data-constraints="@Required"></div>
+                    <div class="col-12 col-md-6 mb-3"><input class="form-input" type="email" name="email" placeholder="Email" data-constraints="@Email @Required"></div>
+                    <div class="col-12 col-md-6 mb-3"><input class="form-input" type="text" name="phone" placeholder="Telefono" data-constraints="@Numeric @Required"></div>
+                    <div class="col-12 col-md-6 mb-3"><input class="form-input" type="text" name="activity" placeholder="Tipo di attività"></div>
+                    <div class="col-12 col-md-6 mb-3"><input class="form-input" type="text" name="model" placeholder="Modello dispositivo"></div>
                     <div class="col-12 mb-3"><textarea class="form-input" name="message" rows="4" placeholder="Descrivi il problema o la richiesta..." data-constraints="@Required"></textarea></div>
                   </div>
                   <button class="button button-primary w-100" type="button" disabled style="opacity: 0.5; cursor: not-allowed;">Invio temporaneamente disabilitato</button>
